@@ -6,6 +6,8 @@ using namespace std;
 void primefactor(int num)
 {
     //print numbe rof twos
+    if (num<=1) return;
+
     while(num%2==0)
     {
         cout<<2<<" ";
