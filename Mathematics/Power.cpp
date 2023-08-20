@@ -34,6 +34,20 @@ long long powr(int num, int pwr)
     return res;
 }
 
+//Method 3 of power iterative 
+
+long long Power(int num, int pwr)
+{
+    int temp=0;
+
+    if(pwr==0) return 1;
+
+    temp = Power(num, pwr/2);
+
+    if(pwr%2==0) return temp*temp;
+    else return num*temp*temp;
+}
+
 int main()
 {
     int num=3, pwr=5;
@@ -44,4 +58,7 @@ int main()
 
     cout<<powr(num,pwr)<<endl;
     cout<<powr(num1,pwr1)<<endl;
+
+    cout<<Power(num,pwr)<<endl;
+    cout<<Power(num1,pwr1)<<endl;
 }
