@@ -41,6 +41,8 @@ int main()
 
     int arr1[] = {1,-2,3,-1,2};
 
+    //int arr2[] = {-3,8,-2,4,-5,6}; test case sample
+
     cout<<maxsubarraySum(arr, 7)<<endl;
 
     cout<<maxsubarraySum(arr1, 5)<<endl;
