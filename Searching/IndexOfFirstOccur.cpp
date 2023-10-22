@@ -2,6 +2,20 @@
 #include<math.h>
 using namespace std;
 
+//Nvaive solution
+
+int indxOfFstOcuurnc(int arr[], int n, int elm)
+{
+    for(int i=0; i<n; i++)
+    {
+        if(arr[i]==elm)
+        {
+            return i;
+        }
+    }
+    return -1;
+}
+
 //Recursive solution
 
 int indxFirstOccurRec(int arr[], int lp, int rp, int elm)
@@ -77,6 +91,12 @@ int main()
 
     int arr2[] = {15,15,15};
 
+    cout<<indxOfFstOcuurnc(arr, 7, 20)<<endl;
+
+    cout<<indxOfFstOcuurnc(arr1, 3, 15)<<endl;
+
+    cout<<indxOfFstOcuurnc(arr2, 3, 15)<<endl;
+
     cout<<indxFirstOccurence(arr, 7, 20)<<endl;
 
     cout<<indxFirstOccurence(arr1, 3, 15)<<endl;
@@ -88,5 +108,5 @@ int main()
     cout<<indxFirstOccurRec(arr1, 0, 2, 15)<<endl;
 
     cout<<indxFirstOccurRec(arr2, 0, 2, 15)<<endl;
-    
+
 }
