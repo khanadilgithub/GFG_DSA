@@ -86,12 +86,6 @@ int SearchInSortedArray(int arr[], int n, int elm)
     return -1;
 }
 
-
-
-
-
-
-
 int main()
 {
     int arr[] = {10,20,40,60,5,8};
