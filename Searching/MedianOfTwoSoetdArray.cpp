@@ -4,6 +4,8 @@
 #include<math.h>
 using namespace std;
 
+//Naive Solution
+
 int FindMedian(int arr1[], int arr2[], int n1, int n2)
 {
     int size=n1+n2;
@@ -31,6 +33,10 @@ int FindMedian(int arr1[], int arr2[], int n1, int n2)
         return temp[size/2];
     }
 }
+
+//Efficent Solution 
+
+//will add later
 
 int main()
 {

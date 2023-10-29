@@ -68,6 +68,10 @@ int repeatingElements(int arr[], int n)
     return -1;
 }
 
+//Efficent Solution 
+
+//will add later
+
 int main()
 {
     int arr[] = {0,2,1,3,2,2};
