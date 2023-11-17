@@ -20,7 +20,7 @@ int hoarePartition(int arr[], int n, int p)
             rp--;
         }while(arr[rp]>pvt);
 
-        if(lp>rp)
+        if(lp>=rp)
         {
             for(int i=0; i<n; i++)
             {
