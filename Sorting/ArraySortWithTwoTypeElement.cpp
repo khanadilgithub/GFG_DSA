@@ -86,7 +86,6 @@ int sortElements(int arr[], int n)
     }
 }
 
-
 int main()
 {
     int arr[] = {-12,18,-10,15};
