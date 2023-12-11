@@ -6,6 +6,12 @@ bool subSequenceSearch(const string str1, const string str2)
 {
     int n =str1.size();
     int m = str2.size();
+
+    if(m>n)
+    {
+        return false;
+    }
+
     int j=0;
     for(int i=0; i<n && j<m; i++)
     {
@@ -21,7 +27,6 @@ bool subSequenceSearch(const string str1, const string str2)
 
 bool subSequenceSearchRec(const string str1, const string str2, int n, int m)
 {
-
     if(m==0)
     {
         return true;
