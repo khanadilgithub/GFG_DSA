@@ -46,7 +46,10 @@ int longestSubarrays(int arr[], int n, int sum)
         {
             res=max(res, i-psumindx[prefixsum-sum]);
         }
-        psumindx[prefixsum] = i;
+        else
+        {
+            psumindx[prefixsum] = i;
+        }
     }
 
     return res;
