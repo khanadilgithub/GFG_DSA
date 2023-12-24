@@ -78,9 +78,9 @@ bool anagramSearchs(string &str, string &patrn)
 
 int main()
 {
-    string str = "geeksforgeeks";
+    string str = "codesforcoders";
 
-    string pattrn = "frog";
+    string pattrn = "froc";
 
     cout<<anagramSearch(str, pattrn)<<endl;
     cout<<anagramSearchs(str, pattrn)<<endl;
