@@ -2,66 +2,73 @@
 #include<math.h>
 using namespace std;
 
-//STL vector can aslo be use to povide dynamic size
+struct Node
+{
+    int m_data;
+    Node* m_next;
+
+    Node(int x):m_data(x),m_next(NULL)
+    {}
+};
 
 class Stack
 {
     private:
-    int *m_arr;
-    int m_top;
-    int m_cap;
+    size_t m_size;
+    Node* m_head;
     public:
 
-    Stack():m_arr{0}, m_top(-1),m_cap(5)
-    {
-        m_arr = new int [m_cap];
-    }
+    Stack():m_size(0),m_head(NULL)
+    {}
     void push(int val)
     {
-        if(m_top==m_cap-1)
-        {
-            int *tmptr = new int[m_cap*2];
-            for(int i=0; i<m_cap; i++)
-            {
-                tmptr[i]=m_arr[i];
-            }
-            m_cap*=2;
-            delete m_arr;
-            m_arr=tmptr;
-        }
-        m_arr[++m_top]=val;
+        Node* newNode = new Node(val);
+
+        newNode->m_next=m_head;
+
+        m_head=newNode;
+        m_size++;
     }
 
     int pop()
     {
-        if(m_top==-1)
+        if(m_head==NULL)
         {
-            cout<<"stack is empty"<<endl;
+            cout<<" stack is empty"<<endl;
             return -1;
         }
-        return m_arr[m_top--];
+        Node* cur = m_head;
+        int val=cur->m_data;
+        m_head=m_head->m_next;
+        delete cur;
+        m_size--;
+        return val;
     }
+
     int size()
     {
-        return m_top+1;
+        return m_size;
     }
 
     bool empty()
     {
-        if(m_top==-1) return true;
+        if(m_head==NULL) return true;
         else return false;
     }
 
     int peek()
     {
-        return m_arr[m_top];
+        return m_head->m_data;
     }
 
     void print()
     {
-        for(int i=m_top; i>=0; i--)
+        Node* cur=m_head;
+
+        while(cur!=NULL)
         {
-            cout<<m_arr[i]<<" ";
+            cout<<cur->m_data<<" ";
+            cur=cur->m_next;
         }
         cout<<endl;
     }
