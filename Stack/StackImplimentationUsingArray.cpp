@@ -26,7 +26,7 @@ class Stack
                 tmptr[i]=m_arr[i];
             }
             m_cap*=2;
-            delete m_arr;
+            delete[] m_arr;
             m_arr=tmptr;
         }
         m_arr[++m_top]=val;
