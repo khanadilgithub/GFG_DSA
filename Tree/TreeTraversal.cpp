@@ -39,6 +39,15 @@ void postorderTravesal(Node* root)
     cout<<root->m_data<<" ";
 }
 
+int treeHight(Node* root)
+{
+    if(root==NULL) return 0;
+    else 
+    {
+        return max(treeHight(root->m_left),treeHight(root->m_right))+1;
+    }
+}
+
 int main()
 {
     Node* root = new Node(10);
@@ -56,4 +65,6 @@ int main()
     cout<<endl;
     postorderTravesal(root);
     cout<<endl;
+
+    cout<<"Hight of tree is: "<<treeHight(root)<<endl;
 }
