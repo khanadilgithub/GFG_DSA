@@ -7,9 +7,12 @@ struct Node
     int m_data;
     Node* m_left;
     Node* m_right;
-    Node(int val):m_data(val), m_left(NULL),m_right(NULL)
+
+    Node(int val)
     {
-        //constructor
+        m_data=val;
+        m_left=NULL;
+        m_right=NULL;
     }
 };
 
